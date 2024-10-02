@@ -1,0 +1,446 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html{
+	scroll-behavior: smooth;
+}
+
+#header{
+	background-color: #000000;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+.navbar-brand{
+	font-family: cursive;
+	color: #02231c;
+	text-shadow: 1px 1px #91f086;
+}
+.navbar-nav li a{
+	color: #48bf53;
+	font-weight: lighter;
+	font-size: 17px;
+	text-align: center;
+	transition: 0.7s;
+}
+.fa-bars{
+	color: #91f086;
+	font-size: 30px !important;
+	background-color: #023020;
+	padding: 3px 7px;
+}
+.navbar-nav li a::after{
+	content: "";
+	height: 2px;
+	background-color: #004d25;
+	display: block;
+	width: 0%;
+	margin: auto;
+	transition: 0.7s;
+}
+.navbar-nav li a:hover::after{
+	width: 100%;
+}
+.navbar-nav li a:hover{
+	color: #91f086;
+}
+
+/*------banner-----section-------------------------*/
+
+
+#banner{
+	background-color: #000000;
+	color: #fff;
+	padding: 80px 0px;
+}
+/* Achieve curved line under princely............*/
+.underline{
+	position: relative;
+}
+.underline::after{
+	content: "";
+	position: absolute;
+	width: 100%;
+	border-top: 1px solid #91f086;
+	left: 0;
+	bottom: -10px;
+	border-radius: 50%;
+	height: 10px;
+}
+/*-------sliding text-------------------*/
+
+#title{
+	font-size: 25px;
+	line-height: 100px;
+	height: 100px;
+	text-align: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+.title-slider{
+	margin-left: 12px;
+	box-sizing: border-box;
+	animation: slider 6s linear infinite;
+}
+@keyframes slider{
+	0%{margin-top: -400px;}
+	5%{margin-top: -200px;}
+	30%{margin-top: -200px;}
+	35%{margin-top: 0px;}
+	65%{margin-top: 0px;}
+	70%{margin-top: 200px;}
+	100%{margin-top: 200px;}
+}
+
+/*----Animated button--------------*/
+
+.btn-holder{
+	width: 200px;
+	margin: 20px 10px;
+	text-align: center;
+	padding: 10px 0;
+	border-radius: 25px;
+	font-weight: lighter;
+	border: 1px solid #004d25;
+	background: transparent;
+	color: #fff;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+    
+}
+#span1{
+	background: #004d25;
+	height: 100%;
+	width: 0;
+	border-radius: 25px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+	transition: 0.7s;
+
+}
+.btn-holder:hover #span1{
+	width: 100%;
+}
+
+/*----------ABOUT SECTION----------------------*/
+
+#about{
+	padding: 80px 0;
+	background-color: #fff;
+}
+#about .time{
+	animation-delay: 0.5s;
+}
+#about .par{
+	font-size: 20px;
+	font-weight: bold;
+	animation-delay: 1s;
+
+}
+#about img{
+	border-radius: 5px;
+	animation-delay: 1.5s;
+}
+.anim{
+	opacity: 0;
+	transform: translateY(30px);
+	animation: moveup 0.5s linear forwards;
+}
+@keyframes moveup{
+     100%{
+     	opacity: 1;
+     	transform: translateY(0px);
+     }
+}
+
+.col1{
+	position: relative;
+}
+.elements{
+	position: absolute;
+	left: 0;
+	top: 0;
+	animation: move 2.5s linear infinite;
+}
+@keyframes move{
+	0%{
+		transform: translate(-15px, 0);
+	}
+	50%{
+		transform: translate(0, -15px);
+	}
+	100%{
+		transform: translate(-15px, 0);
+	}
+}
+
+.talent-title, .query1{
+	opacity: 0;
+}
+.talent-title.animate__animated, .query1.animate__animated{
+	opacity: 1;
+}
+.query2{
+	opacity: 0;
+}
+.query2.animate__animated{
+	opacity: 1;
+}
+.talent-title{
+	animation-delay: 0.5s;
+}
+.query1{
+	animation-delay: 1s;
+}
+.query2{
+	animation-delay: 1s;
+}
+
+
+/*---------SERVICES SECTION--------------------------------*/
+
+#services{
+	background-color: #000000;
+	color: #fff;
+}
+.tab-content{
+	margin: 25px 0;
+	line-height: 10px;
+}
+.tab-pane{
+	color: green;
+}
+/*--Title Animation in services section---------*/
+.service-title{
+	opacity: 0;
+}
+.service-title.animate__animated{
+	opacity: 1;
+}
+.service-title{
+	animation-delay: 1s;
+}
+.nav-anim{
+	opacity: 0;
+}
+.nav-anim.animate__animated{
+	opacity: 1;
+}
+.nav-anim{
+	animation-delay: 1s;
+}
+
+/*---card------------------*/
+.card p{
+	font-weight: lighter;
+}
+.card h5{
+	font-family: recursive;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+/*-----CARD COL ANIMATION--------------------*/
+
+
+.card-anim{
+	opacity: 0;
+}
+.card-anim.animate__animated{
+	opacity: 1;
+}
+.card-anim{
+	animation-delay: 1s;
+}
+
+/*----CCNA & ACCORDION SECTION-----------------*/
+
+#ccna{
+	background-color: #e3edf7;
+}
+
+
+/*---accordion-----------------------------*/
+
+.accordion{
+  margin:60px auto;
+  /*width: 400px;*/
+  
+
+}
+.accordion li{
+  list-style:none;
+width:90%;
+margin:20px;
+padding:10px;
+border-radius:8px;
+/*backgroud:#e3edf7;*/
+box-shadow:6px 6px 10px -1px rgba(0,0,0,0.15),-6px -6px 10px -1px rgba(255,255,255,0.7);
+}
+
+.accordion li label{
+
+   display:flex;
+   align-items:center;
+   padding:10px;
+   font-size:18px;
+   font-weight:500;
+   cursor:pointer;
+}
+
+label::before{
+  content: '+';
+  margin-right: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+input[type="radio"]{
+   display:none;
+}
+
+.accordion .accordion-content{
+  color:#555;
+  padding: 0 10px;
+  line-height: 26px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+}
+
+ .accordion input[type="radio"]:checked + label + .accordion-content{
+   max-height: 200px;
+   padding: 10px 10px 20px;
+}
+
+  .accordion input[type="radio"]:checked + label::before{
+   content: '-';
+}
+
+.faq{
+	text-decoration: underline  #48bf53;
+
+}
+/*--------------ccna section animation----------------*/
+#ccna-el1{
+	opacity: 0;
+}
+#ccna-el1.animate__animated{
+    opacity: 1;
+}
+#ccna-el1{
+	animation-delay: 1s;
+}
+/*----------------------------------------*/
+#ccna-el2{
+	opacity: 0;
+}
+#ccna-el2.animate__animated{
+    opacity: 1;
+}
+#ccna-el2{
+	animation-delay: 1s;
+}
+
+/*------------instructors----------------------*/
+
+.instructors{
+	background-color: #e3edf7;
+}
+#first-card, #second-card{
+	background-color: #e3edf7;
+	box-shadow:6px 6px 10px -1px rgba(0,0,0,0.15),-6px -6px 10px -1px rgba(255,255,255,0.7);
+	
+}
+
+
+/*----Contact section----------------------*/
+
+#contact{
+	background-color: #000000;
+	color: #fff;
+}
+.social-icons a{
+	font-size: 23px;
+	display: inline-block;
+	padding-right: 12px;
+	color: green;
+
+}
+.fa-envelope{
+	color: green;
+	font-size: 23px;
+}
+.fa-phone{
+	color: green;
+	font-size: 23px;
+}
+
+
+.form-control{
+	border: 0;
+	outline: none;
+	background-color: #262626;
+	color: #fff;
+}
+/*----------Animate form-----------------------*/
+
+#form{
+	opacity: 0;
+}
+#form.animate__animated{
+	opacity: 1;
+}
+#form{
+	animation-delay: 0.5s;
+}
+
+
+#footer{
+	background-color: #000000;
+	color: #fff;
+	position: relative;
+	width: 100%;
+}
+
+/*------buttons on the instructor cards---------*/
+
+#instructor-el{
+	bottom: 18%;
+
+
+}
+#instructor-el2{
+	bottom: 18%;
+
+}
+
+#msg{
+	color: #61b752;
+	display: block;
+	margin-top: -25px;
+}
+
+/*-------preloader-----------------------------------*/
+#preloader{
+	background: #000 url(loader.gif) no-repeat center center;
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+}
+
+
+
+
+
+
+
